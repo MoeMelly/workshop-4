@@ -30,14 +30,14 @@ public class VehicleManager {
             inventory.add(new Vehicles("Car", 93, "Bentley", "Continental GTC Speed", "Convertible", "Sequin Blue", "SCBBS3ZA3FC0000093", 2025, 66, 389900.00, true));
 
             // Trucks
-            inventory.add(new Vehicles("Truck", 94, "Ford", "F-150 Raptor R", "SuperCrew", "Code Orange", "1FTFW1RJ9RFA00094", 2025, 150, 112725.00, true));
+            inventory.add(new Vehicles("Truck", 93, "Ford", "F-150 Raptor R", "SuperCrew", "Code Orange", "1FTFW1RJ9RFA00094", 2025, 150, 112725.00, true));
             inventory.add(new Vehicles("Truck", 95, "Ram", "1500 TRX", "Crew Cab", "Ignition Orange", "1C6SRFU91PN000095", 2025, 120, 96000.00, true));
             inventory.add(new Vehicles("Truck", 96, "Chevrolet", "Silverado 1500 ZR2", "Crew Cab", "Black", "3GCUDFEL5RG000096", 2025, 80, 72000.00, true));
             inventory.add(new Vehicles("Truck", 97, "Ford", "F-250 Super Duty", "Lariat", "Antimatter Blue", "1FT8W2BN5REE000097", 2025, 60, 80000.00, true));
             inventory.add(new Vehicles("Truck", 98, "GMC", "Sierra 1500 Denali", "Crew Cab", "White Frost Tricoat", "1GTU9FEL5RZ000098", 2025, 50, 85000.00, true));
 
             // SUVs
-            inventory.add(new Vehicles("SUV", 99, "Aston Martin", "DBX707", "Luxury", "Lunar White", "SCFBB03B1PG000099", 2025, 25, 249000.00, true));
+            inventory.add(new Vehicles("SUV", 93, "Aston Martin", "DBX707", "Luxury", "Lunar White", "SCFBB03B1PG000099", 2025, 25, 249000.00, true));
             inventory.add(new Vehicles("SUV", 100, "Audi", "RS Q8 Performance", "Sport", "Nardo Gray", "WA1AVBF1XRD000100", 2025, 30, 127000.00, true));
             inventory.add(new Vehicles("SUV", 101, "Porsche", "Cayenne Turbo E-Hybrid", "Coupe", "Crayon", "WP1AE2AY0RDA00101", 2025, 20, 157000.00, true));
             inventory.add(new Vehicles("SUV", 102, "BMW", "X6 M Competition", "M Sport", "Marina Bay Blue", "5UXCY6C07R9A00102", 2025, 35, 129700.00, true));

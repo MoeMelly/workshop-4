@@ -1,12 +1,6 @@
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 
 public class Dealership {
@@ -53,17 +47,16 @@ public class Dealership {
                 case "2":
                     System.out.println("Please wait...");
                     timer(400);
-                   getType(VehicleManager.getVehicles());
+                   getType(DealershipManager.vehicles());
                     break;
                 case "3":
-                    System.out.println("Search Vehicle by fuel type");
                     timer(200);
-                    getFuelType();
+                    getFuelType(DealershipManager.vehicles());
                     break;
                 case "4":
                     System.out.println("Search vehicle by model");
                     timer(200);
-                    getVehicleModel();
+                    getVehicleModel(DealershipManager.vehicles());
                     break;
                 case "5":
                     System.out.println("Getting Vehicle by trim");
@@ -138,7 +131,7 @@ public class Dealership {
             if (filteredVehicles.isEmpty()) {
                 System.out.println("No Vehicle Found.");
             } else {
-                for (Vehicles vehicle: filteredVehicles) {
+                for (Vehicles vehicle : filteredVehicles) {
                     System.out.println(vehicle + vehicle.getType());
                 }
             }
@@ -146,17 +139,42 @@ public class Dealership {
 
         }
 
-    public static void getFuelType() throws Exception {
+    public static void getFuelType(ArrayList<Vehicles> allVehicles) throws Exception {
         System.out.print("Enter Vehicle FuelType");
         String fuel = scan.nextLine();
 
-        ArrayList<Vehicles> filteredVehicles = new ArrayList<>(VehicleManager.getVehicles().stream()
+        ArrayList<Vehicles> filteredVehicles = new ArrayList<> (VehicleManager.getVehicles().stream()
+                .filter(vehicles -> vehicles.getType().trim().equalsIgnoreCase(fuel.trim()))
+                .toList());
+
+        if (filteredVehicles.isEmpty()) {
+            System.out.println("No Vehicle found.");
+
+        } else {
+            for (Vehicles vehicle : filteredVehicles) {
+                System.out.println("Fuel Type: " + vehicle.getFuelType());
+            }
+        }
 
     }
-    public static void getVehicleMake() {
+    public static void getMake(ArrayList<Vehicles> allVehicles) throws Exception {
+        System.out.println("Enter Vehicle Make");
+        String make = scan.nextLine();
+
+        ArrayList<Vehicles> filteredList = new ArrayList<> (VehicleManager.getVehicles().stream()
+                .filter(vehicles -> vehicles.getMake().trim().equalsIgnoreCase(make.trim()))
+                .toList());
+
+        if (filteredList.isEmpty()) {
+            System.out.println("No Vehicle found");
+        } else {
+            for (Vehicles vehicles : filteredList) {
+                System.out.println("Vehicle Make: " + vehicles.getMake());
+            }
+        }
 
     }
-    public static void getVehicleModel() {
+    public static void getVehicleModel(ArrayList<Vehicles> vehicles) {
 
     }
     public static void getVehicleTrim() {
